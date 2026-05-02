@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        #parent{
+            height: 800px;
+            width: 800px;
+            border: 1px solid;
+            display: grid;
+            /*grid-template-columns: 130px 100px 150px 200px 100px;*/
+            grid-template-columns: repeat(4,100px);
+            grid-template-rows: repeat(5,100px);
+            align-items: center;
+            /*align-items moves each item to start,center or end*/
+            align-content: center;
+            /*align-content means entire grids moves start,center and end*/
+            justify-content: center;
+            /*each column moves to start, end, center and space between ,space around*/ 
+            /*gap: 30px;
+            gap: 30px 50px;*/
+            row-gap: 30px;
+            column-gap: 50px;
+            /*inorder to use gap we should remove space related values*/
+        }
+        .child{
+            height:100px;
+            width: 100px;
+            border: 7px solid;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div> 
+    </div>
+</body>
+</html>

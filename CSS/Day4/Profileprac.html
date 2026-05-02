@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /**{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            color: white;
+        }*/
+        #container{
+            height: 800px;
+            width: 800px;
+            background: skyblue;
+            /*background:40deg,rgb(255,255,0) ;*/
+            /*background: linear-gradient(40deg,rgb(78, 197, 233),rgb(96, 91, 91));*/
+            border-radius: 15%;
+        }
+        #container #img-section img{
+            padding: 10px;
+            height: 40%;
+            width: 40%;
+            border-radius: 85%;
+        }
+        #container #desc-section{
+            color:rgb(52, 52, 203);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 15px;
+            margin: 10px;
+            
+        }
+        #container #desc-section h1{
+            text-decoration: overline;
+            text-transform: uppercase;
+        }
+        #container #desc-section h2{
+            text-transform: capitalize;
+        }
+        #container #desc-section p{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            font-weight: bold;
+
+        }
+        button{
+            height: 40px;
+            width: 200px;
+            border: none;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            font-weight: 700px;  
+            border-radius: 50px; 
+            align-items: justify;
+            margin-bottom: 10px;
+        }
+        button:hover{
+            /*background-color:rgb(1,1,148);*/
+            border: 1px solid blue;
+            color: blue;
+            background-color: transparent;
+        }
+        /*button{
+            color: black;
+            background-color: rgb(0, 255, 200);
+            align-items: justify;
+            border-radius: 50px;
+            margin-bottom: 10px;
+            text-align: justify;
+        }*/
+
+    </style>
+</head>
+<body>
+    <center>
+        <div id="container">
+            <section id="img-section">
+                <img src="https://cdn.britannica.com/39/247539-050-B8127C0B/Rebecca-Ferguson-actress-BAFTA-Awards-2023.jpg" alt="Rebecca Ferguson">
+            </section>
+            <section id="desc-section">
+                <h1>Rebecca Ferguson</h1>
+                <h2>Swedish actress</h2>
+                <p>😍 Rebecca Ferguson is a versatile Swedish actress who rose from teen soap opera stardom in Stockholm to become one of Hollywood's most respected leading ladies. Renowned for her commanding screen presence and ability to portray "steel-willed" characters, she gained international acclaim with a Golden Globe-nominated performance in The White Queen before establishing herself as a powerhouse in major franchises like Mission: Impossible and Dune. Beyond the big screen, she serves as both the star and executive producer of the hit sci-fi series Silo, showcasing a range that spans from physically demanding action roles to complex, emotionally-driven drama.</p>
+            <button>View More</button>
+            </section>
+        </div>
+    </center>
+</body>
+</html>

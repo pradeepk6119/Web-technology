@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Border</title>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0e2136;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 1. Define the custom angle property */
+        @property --deg {
+            syntax: 'angle';
+            inherits: false;
+            initial-value: 0deg;
+        }
+
+        .box {
+            background: #142d4a;
+            height: 200px;
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        /* 2. Group the shared properties for both the border and the glow */
+        .box::before,
+        .box::after {
+            content: "";
+            position: absolute;
+            /* inset acts as top, right, bottom, left. Negative values make it larger than the parent */
+            inset: -4px; 
+            
+            /* Use var(--deg) so the animation actually drives the gradient */
+            background: conic-gradient(from var(--deg) at center,
+                #00c3ff,
+                #4d0199,
+                #6300c6,
+                #009dcd,
+                #00c3ff /* Added the starting color to the end for a seamless visual loop */
+            );
+            border-radius: inherit;
+            animation: autoRotate 2s linear infinite;
+        }
+
+        /* 3. Layer the sharp border just behind the box */
+        .box::before {
+            z-index: -1;
+        }
+
+        /* 4. Layer the blurred glow furthest back */
+        .box::after {
+            filter: blur(20px);
+            z-index: -2;
+        }
+
+        /* 5. The animation */
+        @keyframes autoRotate {
+            to {
+                --deg: 360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+
+</body>
+</html>

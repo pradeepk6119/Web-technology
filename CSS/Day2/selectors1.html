@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        * {
+            color: rgb(135, 245, 208);
+        }
+        h1 {
+            background-color: red;
+        }
+        #heading {
+            background-color: green;
+        }
+        .container {
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+        #division1,#division2,#division3{
+            background-color: pink;
+            /*display: inline-block;*/
+        }
+        #division1{
+            height: 200px;
+            width: 100px;
+        }
+        #division2{
+            height: 300px;
+            width: 200px;
+        }
+        #division3{
+            height: 400px;
+            width: 300px;
+        }
+        #para{
+            width: 300px;
+            height: 300px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <!-- simple selectors -->
+    <!-- 1.tagname selector -->
+    <h1>hello</h1>
+    <!-- 2.id selector  -->
+    <h1 id="heading">hello</h1>
+    <h1>hello</h1>
+    <!-- 3.class selector  -->
+    <div class="container"></div>
+    <section class="container"></section>
+    <br>
+    <article class="container"></article>
+    <!-- 4.universal selector  -->
+    <p>hi i am paragraph</p>
+    <!-- 5.group selector  -->
+    <div id="division1"></div>
+    <br>
+    <div id="division2"></div>
+    <br>
+    <div id="division3"></div>
+    <br>
+
+    <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti vel, labore exercitationem in asperiores nobis, laudantium quas expedita corporis provident laboriosam nulla. Sit nisi tempore voluptatum, aut animi amet. Inventore qui ab laudantium dolorem iure debitis deleniti assumenda, et sit dicta illo accusamus dolores nostrum ipsam doloribus reprehenderit quis animi. Eveniet, dignissimos debitis vel suscipit atque aperiam totam a quos est voluptatibus recusandae nulla facilis praesentium natus laudantium ad veniam eligendi temporibus reiciendis labore cum nemo fuga perspiciatis. Distinctio, ut alias. Aperiam fugit nostrum laborum tempora sit, aliquam exercitationem commodi obcaecati assumenda eaque. Non saepe praesentium eos doloribus quo voluptas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam natus, sapiente pariatur ea amet! Repellat unde possimus magnam, sunt iure rerum, suscipit accusamus, quas reprehenderit ut enim aspernatur temporibus?</p>
+</body>
+</html>

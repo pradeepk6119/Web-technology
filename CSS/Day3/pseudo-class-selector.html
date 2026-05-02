@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-class</title>
+    <style>
+        button{
+            height: 40px;
+            width: 200px;
+            border: none;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            font-weight: 700px;   
+        }
+        button:hover{
+            /*background-color:rgb(1,1,148);*/
+            border: 1px solid blue;
+            color: blue;
+            background-color: transparent;
+        }
+        input{
+            height: 40px;
+            width: 300px;
+            outline: none;
+        }
+        input:focus{
+            border: 5px solid red;
+        }
+        a:link{
+            color: black;
+            text-decoration: none;
+        }
+        a:active{
+            color:orangered;
+        }
+        a:visited{
+            color: green;
+        }
+        /*h1:first-child{
+            background-color: yellowgreen;
+            color: white;
+        }
+        h1:last-child{
+            background-color: yellow;
+            color: white;
+        }
+        h1:nth-of-type(even){
+            background-color: red;
+            color: white;
+        }
+        h1:nth-of-type(odd){
+            background-color: orange;
+            color:white;
+        }*/
+        h1:nth-of-type(3){
+            background-color: orange;
+            color: white;
+        }
+        h1:nth-of-type(2){
+            background-color: rgb(73, 243, 181);
+            color: white;
+        }
+        p:first-of-type{
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button>click me</button>
+    <input type="text" placeholder="enter your name">
+    <a href="##">click me</a>
+    <a href="###">click me</a>
+    <div>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h2>hello</h2>
+        <h1>hello</h1>
+        <p>hello</p>
+        <h1>hello</h1>
+        <h1>hello</h1>
+    </div>
+</body>
+</html>

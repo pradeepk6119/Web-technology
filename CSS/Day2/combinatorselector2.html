@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator-Selector</title>
+    <style>
+        /*1.descendents selector : it is represented by space*/
+        /*#parent h1{
+            background-color: red;
+            }
+        #parent #gc{
+            background-color: green;
+        }
+        #parent1 section h1{
+            background-color: black;
+            color: white;
+        }*/
+        /*2.child selector*/
+        #parent>h1{
+            background-color: red;
+        }
+        #parent>section>#gc,#parent1>section>#gc1{
+            background-color: green;
+        }
+        /*h1{
+            background-color: orange !important;
+        }*/
+        /*adjascent sibling selector*/
+        /*#sib1+p{
+            background-color: green;
+        }*/
+        /*general sibling selector*/
+        #sib1~p{
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="parent">
+        <h1>I am first child</h1>
+        <section>
+            <h1 id="gc">I am grand child</h1>
+        </section>
+    </div>
+    <div id="parent1">
+        <h1>I am first child</h1>
+        <section>
+            <h1 id="gc1">I am grand child</h1>
+        </section>
+    </div>   -->
+    <div>
+        <h1 id="sib1">hello</h1>
+        <p>para1</p>
+        <span>hello</span>
+        <p>para2</p>
+        <p>para3</p>
+        <p>para4</p>
+        <p>para5</p>
+        <span>hello</span>
+        <p>para6</p>
+    </div>
+</body>
+</html>

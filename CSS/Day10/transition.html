@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+            background-color: blue;
+            /*transition-property: width;
+            transition-duration:5s;
+            transition-timing-function: linear;*/
+            /*ease,linear,ease-in,ease-out,ease-in-out*/
+            /*transition-delay: 2s;*/
+            /*transition: width 5s linear 2s;*/
+            transition: all 5s linear;
+            /*first two values are mandatory*/
+            /*transition: background-color 5s linear;*/
+        }
+        div:hover{
+            width: 700px;
+            background-color: green;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

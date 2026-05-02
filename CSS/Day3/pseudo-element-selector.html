@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-element-selector</title>
+    <style>
+        p::first-letter{
+            color: orangered;
+        }
+        p::first-line{
+            color: green;
+        }
+        p::before{
+            content: "duhh😒!!!";
+        }
+        p::after{
+            content: "end👍";
+        }
+        input{
+            color: red;
+        }
+        input::placeholder{
+            color:green;
+        }
+        li::marker{
+            color: orange;
+        }
+        ul li::marker{
+            content: "➡️";
+            font-size: 25px;
+        }
+        /*emoji shortcut: windows key+ ">"*/
+        p::selection{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, ullam quod omnis adipisci non architecto aliquam iure soluta in iste rerum nam reiciendis, quae ea suscipit nemo enim. Eum, quis tempora, est molestias debitis ea quam ad aspernatur quas sunt reiciendis nisi, cumque doloribus rerum totam fugit quae ratione vel.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, sapiente. Pariatur iste est perferendis similique ad repudiandae enim odit velit!</p> 
+    <input type="text" placeholder="enter text">
+    <ol>
+        <li>pradeep</li>
+        <li>pradeep</li>
+        <li>pradeep</li>
+        <li>pradeep</li>
+    </ol>
+    <ul>
+        <li>pradeep</li>
+        <li>pradeep</li>
+        <li>pradeep</li>
+        <li>pradeep</li>
+    </ul>
+</body>
+</html>
