@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonWalk | Sneaker Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div id="logo-container" onclick="navigate('home-view')">
+                <img src="https://www.pngitem.com/pimgs/m/9-90139_moonwalk-dance-silhouette-michael-jackson-moonwalk-png-transparent.png" alt="MoonWalk Logo">
+                <span>Moon<b>Walk</b></span>
+            </div>
+            
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Search for sneakers...">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+            </div>
+
+            <div id="menu-container">
+                <a href="#" onclick="navigate('dashboard-view')">Dashboard</a>
+                <a href="#" onclick="navigate('collections-view')">Collections</a>
+                <a href="#" onclick="navigate('brands-view')">Brands</a>
+            </div>
+
+            <div id="cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
+                </svg>
+                <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        
+        <section id="home-view" class="view active">
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1>Step Into The Future</h1>
+                    <p>Discover the latest drops and exclusive sneaker collections.</p>
+                    <button class="shop-now-btn" onclick="navigate('collections-view')">Shop Now</button>
+                </div>
+            </div>
+            <div class="featured-section">
+                <h2 class="section-title">Featured Drops</h2>
+                <div class="product-grid" id="featured-grid"></div>
+            </div>
+        </section>
+
+        <section id="dashboard-view" class="view hidden">
+            <h2 class="section-title">Store Dashboard</h2>
+            <div class="dashboard-content">
+                <div class="store-info">
+                    <h3>About MoonWalk</h3>
+                    <p>Established in 2026, MoonWalk is the premium destination for exclusive, limited-edition, and classic sneakers. We source globally to bring the best kicks right to your doorstep. Whether you are a collector, an athlete, or a streetwear enthusiast, we have the perfect fit for you.</p>
+                    <p><strong>Mission:</strong> To connect sneakerheads with their grail shoes while ensuring 100% authenticity and premium customer service.</p>
+                </div>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h4>Total Collections</h4>
+                        <p id="stat-collections">50+</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Partner Brands</h4>
+                        <p id="stat-brands">6</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Happy Customers</h4>
+                        <p>12,000+</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="collections-view" class="view hidden">
+            <h2 class="section-title">All Collections</h2>
+            <div class="product-grid" id="product-grid"></div>
+        </section>
+
+        <section id="brands-view" class="view hidden">
+            <h2 class="section-title">Our Partner Brands</h2>
+            <div class="brands-grid">
+                <div class="brand-card" onclick="filterByBrand('Nike')"><h2>NIKE</h2></div>
+                <div class="brand-card" onclick="filterByBrand('Jordan')"><h2>JORDAN</h2></div>
+                <div class="brand-card" onclick="filterByBrand('Adidas')"><h2>ADIDAS</h2></div>
+                <div class="brand-card" onclick="filterByBrand('New Balance')"><h2>NEW BALANCE</h2></div>
+                <div class="brand-card" onclick="filterByBrand('Puma')"><h2>PUMA</h2></div>
+                <div class="brand-card" onclick="filterByBrand('Converse')"><h2>CONVERSE</h2></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>Moon<b>Walk</b></span>
+                <p>The ultimate destination for sneakerheads.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 MoonWalk. All rights reserved.</p>
+    </footer>
+
+    <div id="toast-container"></div>
+
+    <div id="product-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body" class="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

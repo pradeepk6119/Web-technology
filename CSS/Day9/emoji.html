@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,15 +13,18 @@
             align-items: center;
             justify-content: center;
         }
+
         #face {
             height: 300px;
             width: 300px;
             border-radius: 50%;
             /*background: linear-gradient(to right, red, orange);*/
             background-color: #FFD700;
-            box-shadow: 0px 5px 10px rgb(104, 104, 7);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          /*  box-shadow: 0px 5px 10px rgb(104, 104, 7);*/
             position: relative;
         }
+
         #eye-container {
             height: 70px;
             width: 100%;
@@ -30,12 +34,14 @@
             justify-content: space-evenly;
             top: 60px;
         }
+
         #eye-container .eyes {
             height: 100%;
             width: 60px;
             border-radius: 50%;
             background-color: white;
         }
+
         #eye-container .eyes .eyeball {
             height: 51%;
             width: 50%;
@@ -44,28 +50,72 @@
             position: relative;
             top: 35px;
             left: 14px;
+            animation: roll 1s linear infinite;
         }
-        #mouth{
-            height: 3px;
+
+        @keyframes roll {
+            0% {
+                transform: translate(0px, -1px);
+
+            }
+
+            50%,
+            60%,
+            70%,
+            80%,
+            90%,
+            100% {
+                transform: translate(0px, -35px);
+
+            }
+        }
+
+        #mouth {
+            height: 2px;
             width: 100px;
             background-color: black;
             position: absolute;
-            bottom: 90px;
+            bottom: 70px;
             left: 100px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 25%;
+
+            /* The transition makes the morph smooth */
+            transition: all 0.3s ease-in-out;
+            animation: shock 1s linear infinite;
+            border: solid transparent;
+            /* Hide top/side borders */
+            border-bottom-color: black;
+            /* Only show bottom border */
+            border-width: 0 0 10px 0;
+            /* Thickness of the smile */
+            border-radius: 0 0 50px 50px;
+            /* Curve the bottom to make the smile shape */
+            bottom: 20%;
         }
-       /* @keyframes shock{
-            50%{
+
+        @keyframes shock {
+            50% {
                 height: 20px;
                 width: 20px;
                 border-radius: 50px;
                 left: 140px;
             }
-            70%,80%,90%,100%{
-                
+
+            70%,
+            80%,
+            90%,
+            100% {
+                height: 50px;
+                width: 50px;
+                border-radius: 50px;
+                left: 130px;
             }
-        }*/
+        }
     </style>
 </head>
+
 <body>
     <div id="face">
         <div id="eye-container">
@@ -81,4 +131,5 @@
         </div>
     </div>
 </body>
+
 </html>
